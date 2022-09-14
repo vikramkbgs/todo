@@ -1,0 +1,48 @@
+body{
+    margin: 0px;
+}
+
+.container{
+    background-color: bisque;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.todo-container{
+    background-color: blueviolet;
+    width: 90%;
+    height: 90%;
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 0.27fr .8fr 1fr;
+    justify-self: center;
+}
+
+.todo-title{
+    background-color: aquamarine;
+    justify-self: center;
+}
+
+.todo-input{
+    background-color: coral; 
+    display: flex;
+    flex-direction: column;
+}
+.todo-tasks{
+    background-color: cornsilk;
+}
+
+.todo-shortcut{
+    background-color: darksalmon;
+    display: flex;
+    justify-content: space-around;
+}
+
+.todo-items{
+    background-color:rgb(128, 128, 128);
+}
+
+.todo-input-item{
+    flex-grow:1;
+}

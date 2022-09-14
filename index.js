@@ -16,7 +16,8 @@ const app = express();
 // settiing view engine and its path
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'views'));
-
+// setting static file path for use
+app.use(express.static('assests'));
 
 
 
