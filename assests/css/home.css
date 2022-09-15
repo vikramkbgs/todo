@@ -5,14 +5,15 @@ body{
 .container{
     background-color: bisque;
     display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
+    height: 90%;
+    margin: 2%;
+    grid-template-columns: 1fr 1.5fr 1fr;
 }
 
 .todo-container{
     background-color: blueviolet;
     width: 90%;
-    height: 90%;
+    height: 0%;
     grid-column: 2/3;
     display: grid;
     grid-template-rows: 0.27fr .8fr 1fr;

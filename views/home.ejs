@@ -1,86 +1,98 @@
 <html>
-    <head>
-
-        <link rel="stylesheet" href="/css/home.css">
-    </head>
-    <body>
-        <div  class="container">
-            <div class="todo-container">
-                <div class="todo-title">
-                    <h1>TODO App</h1>
-                </div>
-                <div class="todo-input">
-                    
-                    <div class="todo-input-item">
-                        <hr style="margin-top:0">
-                        <label>Description
-                            <br>
-                            <input type="text" placeholder="What do you need to do?" />
-                        </label>
-                    </div>
-                    <div class="todo-input-item">
-                        <hr>
-                        <span>
-                            <label>
-                                Catogery
-                                <select>
-                                    <option value="Work">Work</option>
-                                    <option value="Personal">Personal</option>
-                                    <option value="Cleaning">Cleaning</option>
-                                    <option value="School">School</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </label>
-                        </span>
-                        <span>
-                            <label>
-                                Due Date
-                                <input type="date" />
-                            </label>
-                        </span>
-                    </div>
-                    <div class="todo-input-item">
-                        <hr>
-                        <span>
-                            <label>
-                                Priority
-                                <select>
-                                    <option value="low">low</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="High">High</option>
-                                    <option value="Urgent">Urgent</option>
-                                </select>
-                            </label>
-                        </span>
-                        <span>
-                            <label>
-                                Color
-                                <select>
-                                    <option value="red">red</option>
-                                    <option value="green">green</option>
-                                    <option value="High">High</option>
-                                    <option value="Urgent">Urgent</option>
-                                </select>
-                            </label>
-                        </span>
-                    </div>
-                </div>
-                <div class="todo-tasks">
-                    <hr style="margin:0">
-                    <div class="todo-shortcut">
-                        <button>All</button>
-                        <button>Pending</button>
-                        <button>Completed</button>
-                    </div>
-                    <div class="todo-items">
-                        <ul>
-                            <li>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <head>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-container">
+        <div class="todo-title">
+          <h1>TODO App</h1>
         </div>
-    </body>
+
+        <div class="todo-input">
+          <form action="/add" method="post">
+            <div class="todo-input-item">
+              <hr style="margin-top: 0" />
+              <label for="description"
+                >Description
+                <br />
+                <input
+                  type="text"
+                  placeholder="What do you need to do?"
+                  id="description"
+                  name="task"
+                />
+              </label>
+            </div>
+            <div class="todo-input-item">
+              <hr />
+              <span>
+                <label for="catogery">
+                  Catogery
+                  <select id="catogery" name="catogery">
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="School">School</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </label>
+              </span>
+              <span>
+                <label for="due-date">
+                  Due Date <input type="date"  id="due-date" name="dueDate" />
+                </label>
+              </span>
+            </div>
+            <div class="todo-input-item">
+              <hr />
+              <span>
+                <label for="priority">
+                  Priority
+                  <select id="priority" name="priority">
+                    <option value="low">low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                    <option value="Urgent">Urgent</option>
+                  </select>
+                </label>
+              </span>
+              <span>
+                <label for="color">
+                  Color
+                  <select id="color" name="taskColor">
+                    <option value="red">red</option>
+                    <option value="green">green</option>
+                    <option value="High">High</option>
+                    <option value="Urgent">Urgent</option>
+                  </select>
+                </label>
+              </span>
+            </div>
+            <div>
+              <span>
+                <input type="submit" value="Add" />
+              </span>
+              <span>
+                <input type="button" value="delete" />
+              </span>
+            </div>
+          </form>
+        </div>
+        <div class="todo-tasks">
+          <hr style="margin: 0" />
+          <div class="todo-shortcut">
+            <button>All</button>
+            <button>Pending</button>
+            <button>Completed</button>
+          </div>
+          <div class="todo-items">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
