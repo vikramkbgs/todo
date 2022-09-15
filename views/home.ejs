@@ -1,5 +1,6 @@
 <html>
   <head>
+    <title><%= locals.title %></title>
     <link rel="stylesheet" href="/css/home.css" />
   </head>
   <body>
@@ -10,9 +11,9 @@
         </div>
 
         <div class="todo-input">
-          <form action="/add" method="post">
             <div class="todo-input-item">
               <hr style="margin-top: 0" />
+               <form action="/add" method="post">
               <label for="description"
                 >Description
                 <br />
@@ -21,6 +22,7 @@
                   placeholder="What do you need to do?"
                   id="description"
                   name="task"
+                  required
                 />
               </label>
             </div>
@@ -29,7 +31,7 @@
               <span>
                 <label for="catogery">
                   Catogery
-                  <select id="catogery" name="catogery">
+                  <select id="catogery" name="catogery" required>
                     <option value="Work">Work</option>
                     <option value="Personal">Personal</option>
                     <option value="Cleaning">Cleaning</option>
@@ -39,8 +41,8 @@
                 </label>
               </span>
               <span>
-                <label for="due-date">
-                  Due Date <input type="date"  id="due-date" name="dueDate" />
+                <label for="due-date" >
+                  Due Date <input type="date" id="due-date" name="dueDate" required/>
                 </label>
               </span>
             </div>
@@ -49,7 +51,7 @@
               <span>
                 <label for="priority">
                   Priority
-                  <select id="priority" name="priority">
+                  <select id="priority" name="priority" required>
                     <option value="low">low</option>
                     <option value="Medium">Medium</option>
                     <option value="High">High</option>
@@ -60,7 +62,7 @@
               <span>
                 <label for="color">
                   Color
-                  <select id="color" name="taskColor">
+                  <select id="color" name="taskColor" required>
                     <option value="red">red</option>
                     <option value="green">green</option>
                     <option value="High">High</option>
@@ -73,23 +75,39 @@
               <span>
                 <input type="submit" value="Add" />
               </span>
+              </form>
+              <form action="/del" method="post">
               <span>
-                <input type="button" value="delete" />
+                <input type="submit" value="delete" />
               </span>
             </div>
-          </form>
+         
         </div>
         <div class="todo-tasks">
           <hr style="margin: 0" />
-          <div class="todo-shortcut">
-            <button>All</button>
-            <button>Pending</button>
-            <button>Completed</button>
-          </div>
           <div class="todo-items">
             <ul>
-              <li></li>
+              <% for (let i of todoLists){%>
+              <li>
+                <div>
+                  <span>
+                    <label for="<%= i._id %>"
+                      ><input
+                        type="checkbox"
+                        name="id"
+                        value="<%= i._id %>"
+                        id="<%= i._id %>"
+                      />
+                      <%= i.task %></label
+                    >
+                  </span>
+                  <span> <%= i.dueDate %> </span>
+                   <span> <%= i.taskColor %> </span>
+                </div>
+              </li>
+              <%}%>
             </ul>
+            </form>
           </div>
         </div>
       </div>
