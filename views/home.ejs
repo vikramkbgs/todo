@@ -11,20 +11,17 @@
   <div class="container">
     <div class="todo-container">
       <div class="todo-title">
-        <h1>TODO App</h1>
+        <h1>TODO APP</h1>
       </div>
 
       <div class="todo-input">
-        <div class="todo-input-item">
-          <hr style="margin-top: 0" />
+        <div class="todo-input-subcontainer1">
           <form action="/add" method="post">
             <label for="description">Description
-              <br />
               <input type="text" placeholder="What do you need to do?" id="description" name="task" required />
             </label>
         </div>
-        <div class="todo-input-item">
-          <hr />
+        <div class="todo-input-subcontainer2">
           <span>
             <label for="catogery">
               Catogery
@@ -43,8 +40,7 @@
             </label>
           </span>
         </div>
-        <div class="todo-input-item">
-          <hr />
+        <div class="todo-input-subcontainer3">
           <span>
             <label for="priority">
               Priority
@@ -68,7 +64,7 @@
             </label>
           </span>
         </div>
-        <div>
+        <div class="todo-input-subcontainer4">
           <span>
             <input type="submit" value="Add" />
           </span>
@@ -81,7 +77,6 @@
 
       </div>
       <div class="todo-tasks">
-        <hr style="margin: 0" />
         <div class="todo-items">
           <ul>
             <% for (let i of todoLists){%>
