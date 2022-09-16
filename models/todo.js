@@ -1,37 +1,36 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 //1. creating schema
 
 const todoSchema = new mongoose.Schema({
-
-    task : {
+    task: {
         type: String,
-        required: true
+        required: true,
     },
-     
+
     catogery: {
-        type : String,
-        required : true
+        type: String,
+        required: true,
     },
 
     dueDate: {
-        type: Date,
-        required: true
+        type: String,
+        required: true,
     },
 
-    priority : {
+    priority: {
         type: String,
-        required: true
+        required: true,
     },
 
     taskColor: {
-       type: String,
-       required : true 
-    }
+        type: String,
+        required: true,
+    },
 });
 
 // 2. creating collection
-const TodoList = mongoose.model('TodoList', todoSchema);
+const TodoList = mongoose.model("TodoList", todoSchema);
 
 //3. exporting our collection
 module.exports = TodoList;

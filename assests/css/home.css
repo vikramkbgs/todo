@@ -1,49 +1,59 @@
-body{
-    margin: 0px;
+body {
+  margin: 0px;
 }
 
-.container{
-    background-color: bisque;
-    display: grid;
-    height: 90%;
-    margin: 2%;
-    grid-template-columns: 1fr 1.5fr 1fr;
+.container {
+  background-color: bisque;
+  display: grid;
+  height: 90%;
+  margin: 2%;
+  grid-template-columns: 1fr 1.5fr 1fr;
 }
 
-.todo-container{
-    background-color: blueviolet;
-    width: 90%;
-    height: 0%;
-    grid-column: 2/3;
-    display: grid;
-    grid-template-rows: 0.27fr .8fr 1fr;
-    justify-self: center;
+.todo-container {
+  background-color: blueviolet;
+  width: 90%;
+  height: 0%;
+  grid-column: 2/3;
+  display: grid;
+  grid-template-rows: 0.27fr 0.8fr 1fr;
+  justify-self: center;
 }
 
-.todo-title{
-    background-color: aquamarine;
-    justify-self: center;
+.todo-title {
+  background-color: aquamarine;
+  justify-self: center;
 }
 
-.todo-input{
-    background-color: coral; 
-    display: flex;
-    flex-direction: column;
-}
-.todo-tasks{
-    background-color: cornsilk;
+.todo-input {
+  background-color: coral;
+  display: flex;
+  flex-direction: column;
 }
 
-.todo-shortcut{
-    background-color: darksalmon;
-    display: flex;
-    justify-content: space-around;
+.todo-tasks {
+  background-color: cornsilk;
 }
 
-.todo-items{
-    background-color:rgb(128, 128, 128);
+.todo-shortcut {
+  background-color: darksalmon;
+  display: flex;
+  justify-content: space-around;
 }
 
-.todo-input-item{
-    flex-grow:1;
+.todo-items {
+  background-color: rgb(128, 128, 128);
+}
+
+.todo-input-item {
+  flex-grow: 1;
+}
+
+li {
+  list-style-type: none;
+  margin-left: -8%;
+}
+
+ul {
+  margin: 0%;
 }
