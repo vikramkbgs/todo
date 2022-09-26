@@ -49,6 +49,7 @@ body {
 li {
   list-style-type: none;
   margin-left:-40px;
+  margin-top: -5px;
 }
 
 ul {
@@ -59,6 +60,25 @@ input{
   font-size: 1.2rem;
 }
 
+select{
+  font-size: 1rem;
+}
+
+input[type="date"]{
+  font-size: 1rem;
+}
+
+input[value="Add"], input[value="delete"]
+{
+  margin-top: 5px;
+}
+input[value="Add"]{
+  margin-right: 5px;
+}
+label{
+  margin-left: 10px;
+  margin-top: 10px;
+}
 
 input[id="description"]{
   display: block;
@@ -67,39 +87,67 @@ input[id="description"]{
   border: none;
   margin:0;
   background-color: aliceblue;
-
 }
+
 .todo-input-subcontainer1{
+
   flex-grow: 1;
-  max-height: 20%;
+  max-height: 40%;
   padding: 0;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
   background-color: rgb(239, 245, 251);
   border:1px solid rgb(203, 204, 205);
 }
 
 .todo-input-subcontainer2 {
+  display: flex;
   flex-grow: 1;
   max-height: 15%;
   margin-top:6px;
   background-color: rgb(239, 245, 251);
   border: 1px solid rgb(203, 204, 205);
+  justify-content: space-around;
 }
 .todo-input-subcontainer3 {
+  display: flex;
   flex-grow: 1;
   max-height: 15%;
   margin-top: 2px;
   background-color: rgb(239, 245, 251);
   border: 1px solid rgb(203, 204, 205);
+  justify-content: space-around;
 }
 .todo-input-subcontainer4 {
+  display: flex;
   flex-grow: 1;
   max-height: 20%;
   margin-top: 2px;
   background-color: rgb(239, 245, 251);
   border: 1px solid rgb(203, 204, 205);
+  justify-content: center;
 }
 
+.content{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-top:18px;
+}
+
+#Work, #Personal, #Cleaning, #School, #Other{
+text-align: right;
+}
+
+.inline{
+  vertical-align: middle;
+}
+
+.box1 {
+  min-height: 27px;
+}
+
+.box1 > span{
+  vertical-align: middle;
+}
 
 @media screen and (max-width : 1295px) {
 

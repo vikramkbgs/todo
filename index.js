@@ -38,7 +38,7 @@ app.get("/", function (req, res) {
 });
 
 app.post("/del", function (req, res) {
-    console.log(typeof req.body.id);
+    // console.log(typeof req.body.id);
 
     if (typeof req.body.id != "string") {
         for (let i = 0; i < req.body.id.length; i++) {
@@ -75,12 +75,12 @@ app.post("/add", function (req, res) {
             return;
         }
     });
-    return res.redirect("back");
+    return res.redirect('/');
 });
 
 app.listen(port, function (err) {
     if (err) {
-        console.log("*******", err);
+        console.log(`Server is down!: err`);
         return;
     }
     console.log("Running Server");

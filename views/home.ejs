@@ -81,19 +81,29 @@
           <ul>
             <% for (let i of todoLists){%>
               <li>
-                <div style="background-color:<%=i.taskColor%>;" class="content">
+                <div style="background-color:<%=i.taskColor%>;" >
+                  <div class="content">
+                    <div class="box1">
                   <span>
-                    <label for="<%= i._id %>"><input type="checkbox" name="id" value="<%= i._id %>" id="<%= i._id %>" />
+                    <label for="<%= i._id %>" class="inline">
+                    <input type="checkbox" name="id" value="<%= i._id %>" id="<%= i._id %>" />
                       <%= i.task %>
                     </label>
                   </span>
+                  <span id="<%= i.priority %>">
+                   <%= i.priority %>
+                  </span>
+                  </div>
+                  <div id="<%= i.catogery %>">
+                   <%= i.catogery %>
+                  </div>
+                  </div>
+                  <div>
                   <span>
                     <%= i.dueDate %>
                   </span>
-                  <span>
-                    <%= i.catogery %>
-                  </span>
-                </div>
+                  </div>
+                  </div>
               </li>
               <%}%>
           </ul>
