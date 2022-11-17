@@ -61,7 +61,7 @@ app.post("/del", function (req, res) {
         });
     }
 
-    return res.redirect("back");
+    return res.redirect("/");
 });
 
 // adding task in database

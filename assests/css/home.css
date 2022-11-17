@@ -89,6 +89,7 @@ input[id="description"]{
   background-color: aliceblue;
 }
 
+
 .todo-input-subcontainer1{
 
   flex-grow: 1;
@@ -212,5 +213,6 @@ text-align: right;
     display: grid;
     grid-template-rows: 0.2fr 1.2fr 0.2fr;
     justify-self: center;
+    color:blue
   }
 }
